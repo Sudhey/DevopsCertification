@@ -15,7 +15,7 @@ pipeline {
    stage ('Docker installation'){
      agent any
      steps{
-        git 'https://github.com/SK-260/Edureka-Devops-certification-project-1.git'
+        git 'https://github.com/Sudhey/DevopsCertification.git'
         dir('.') {
           sh ' sudo ansible-playbook playbook.yaml -i inventory.txt'
         }
@@ -24,7 +24,7 @@ pipeline {
    stage("Building image and running container"){
     agent any 
     steps{
-        git 'https://github.com/SK-260/Edureka-Devops-certification-project-1.git'
+        git 'https://github.com/Sudhey/DevopsCertification.git'
         //script {
         //    error ( ' Intentional failure')
         //}
